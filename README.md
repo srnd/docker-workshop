@@ -22,7 +22,7 @@ wget https://horner.tj/docker && chmod +x docker && export DOCKER_HOST=tcp://40.
 Open a terminal and paste this:
 
 ```shell
-curl https://horner.tj/docker -o docker && chmod +x docker && export DOCKER_HOST=tcp://40.84.236.92:1234
+curl https://horner.tj/dockermac -o docker && chmod +x docker && export DOCKER_HOST=tcp://40.84.236.92:1234
 ```
 
 ## Invoking Docker
