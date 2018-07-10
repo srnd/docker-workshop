@@ -1,32 +1,28 @@
 # Docker Workshop Notes
-## Windows
+## Installing Docker
 
-#### Installing Docker
+### Windows
 
 Open PowerShell and paste this:
 
 ```powershell
-Invoke-WebRequest -Uri "https://horner.tj/dockerwin" -OutFile "docker.exe"; $env:DOCKER_HOST = "tcp://40.84.140.135:1234"
+Invoke-WebRequest -Uri "https://horner.tj/dockerwin" -OutFile "docker.exe"; $env:DOCKER_HOST = "tcp://40.84.236.92:1234"
 ```
 
-## Linux
-
-#### Installing Docker
+### Linux
 
 Open a terminal and paste this:
 
 ```shell
-wget https://horner.tj/docker && chmod +x docker && export DOCKER_HOST=tcp://40.84.140.135:1234
+wget https://horner.tj/docker && chmod +x docker && export DOCKER_HOST=tcp://40.84.236.92:1234
 ```
 
-## macOS
-
-#### Installing Docker
+### macOS
 
 Open a terminal and paste this:
 
 ```shell
-curl https://horner.tj/docker -o docker && chmod +x docker && export DOCKER_HOST=tcp://40.84.140.135:1234
+curl https://horner.tj/docker -o docker && chmod +x docker && export DOCKER_HOST=tcp://40.84.236.92:1234
 ```
 
 ## Invoking Docker
@@ -43,7 +39,11 @@ Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docke
 
 Then run the following command:
 
-- Windows: `$env:DOCKER_HOST = "tcp://40.84.140.135:1234"`
-- Linux/macOS: `export DOCKER_HOST=tcp://40.84.140.135:1234`
+- Windows: `$env:DOCKER_HOST = "tcp://40.84.236.92:1234"`
+- Linux/macOS: `export DOCKER_HOST=tcp://40.84.236.92:1234`
 
 This will tell Docker to connect to our hosted Docker daemon.
+
+## Testing Docker
+
+To see if Docker works, run the command `./docker info`. If you don't get any errors, then you're good to go for the rest of this demo!
