@@ -1,3 +1,5 @@
+# IMPORTANT NOTE: We are no longer hosting the communal Docker daemon. You should get docker from [here](https://www.docker.com/get-docker).
+
 # Docker Workshop Notes
 ## Installing Docker
 
