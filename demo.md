@@ -1,5 +1,7 @@
 # Docker Demo
 
+**This document assumes you already have Docker installed. [Get it here.](https://www.docker.com/get-docker)**
+
 We'll be running a few commands to get a feel for Docker and containers.
 
 ## Hello World
@@ -7,7 +9,7 @@ We'll be running a few commands to get a feel for Docker and containers.
 Docker provides a "hello world" container to test your Docker installation and to get a feel for running containers.
 
 ```shell
-./docker run --rm hello-world
+docker run --rm hello-world
 ```
 
 - `run` is a Docker command that tells it to start a container with the specified image
@@ -19,7 +21,7 @@ Docker provides a "hello world" container to test your Docker installation and t
 Let's try something a bit more fun by running a full Ubuntu image on Docker!
 
 ```shell
-./docker run --rm -it ubuntu
+docker run --rm -it ubuntu
 ```
 
 - You might notice we added `-it` to this command. This is actually a combination of 2 flags: `i` tells Docker to keep the shell interactive and `t` tells it to allocate a TTY. This lets us actually type commands in the container.
@@ -31,7 +33,7 @@ You should be dropped into a new shell. Try running `uname -a`. This is a real L
 By default, Docker containers share the same virtual network, which means they can talk to each other! Since we are all running from the same Docker daemon, they all share the same network. So, to demonstrate this, we can use Docker Chat! Run this command to start up Docker Chat, which will let you talk to other containers also running Docker Chat:
 
 ```sh
-./docker run --rm -it tjhorner/docker-chat
+docker run --rm -it tjhorner/docker-chat
 ```
 
 - The image name is a bit different this time. It includes my username, which indicates that it's a community image and not an official one. You can view the image on [Docker Hub](https://hub.docker.com/r/tjhorner/docker-chat/).
